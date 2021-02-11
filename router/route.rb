@@ -9,6 +9,8 @@ class Routes
   end
 
   def route(source,destination)
+    source.upcase!
+    destination.upcase!
     journey = findDirectRoute(source,destination)
     if journey.length() == 0
       journey = findIndirectRoute(source,destination) 
